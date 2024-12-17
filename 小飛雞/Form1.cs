@@ -40,10 +40,7 @@ namespace 小飛雞
             pictureBox1.Top += 15;    //小雞下降
             if (pictureBox1.Top >= 700|| pictureBox1.Top <= 0)    //如果碰倒邊界停止遊戲
             {
-                timer1.Stop();
-                MessageBox.Show("game over");   //顯示遊戲結束
-                Thread.Sleep(2000);
-                this.Close();
+                this.Close();   //顯示遊戲結束
             }
         }
 
@@ -103,16 +100,7 @@ namespace 小飛雞
                 }
                 else if (rect1.IntersectsWith(rect2))   //如果newPictureBox碰到小雞後消失
                 {
-                    timer.Stop();   
-                    this.Controls.Remove(newPictureBox);   //刪除分身
-                    newPictureBox.Dispose();    //解放資訊
-                    timer.Dispose();     
-                    timer1.Stop();    //停止動作
-                    timer2.Stop();
-                    this.Controls.Clear();   //將柱子建立的分身存入之類的
-                    MessageBox.Show("game over");   //顯示遊戲結束
-                    Thread.Sleep(2000);
-                    this.Close();
+                    this.Close();   //顯示遊戲結束
                 }
             };
 
