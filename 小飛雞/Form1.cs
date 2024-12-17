@@ -23,6 +23,7 @@ namespace 小飛雞
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            pictureBox2.Size = new Size (59, 560);
             timer2.Start();   //柱子開始的timer
             pictureBox1.Location = new Point(125, 200);   //小雞定位
             timer1.Start();   //小雞的位置開始下降timer
