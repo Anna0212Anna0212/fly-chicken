@@ -41,6 +41,8 @@ namespace 小飛雞
             {
                 timer1.Stop();
                 MessageBox.Show("game over");   //顯示遊戲結束
+                Thread.Sleep(2000);
+                this.Close();
             }
         }
 
@@ -108,6 +110,8 @@ namespace 小飛雞
                     timer2.Stop();
                     this.Controls.Clear();   //將柱子建立的分身存入之類的
                     MessageBox.Show("game over");   //顯示遊戲結束
+                    Thread.Sleep(2000);
+                    this.Close();
                 }
             };
 
