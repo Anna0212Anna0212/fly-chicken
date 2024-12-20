@@ -62,7 +62,7 @@
             this.pictureBox2.ErrorImage = null;
             this.pictureBox2.Image = global::小飛雞.Properties.Resources.Flappy_Bird_up;
             this.pictureBox2.InitialImage = null;
-            this.pictureBox2.Location = new System.Drawing.Point(797, -212);
+            this.pictureBox2.Location = new System.Drawing.Point(808, 274);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(59, 607);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

@@ -17,6 +17,8 @@ namespace 小飛雞
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen; // 視窗居中顯示
         }
+        public static int top_num = 0;
+        public static int num = 0;
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -29,7 +31,18 @@ namespace 小飛雞
 
         private void Start_Load(object sender, EventArgs e)
         {
-            
+           if (num > top_num)
+                top_num = num;
+           label1.Text = "最高分" + top_num;
+           label2.Text = "上次成績" + num;
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (num > top_num)
+                top_num = num;
+            label1.Text = "最高分" + top_num;
+            label2.Text = "上次成績" + num;
         }
     }
 }

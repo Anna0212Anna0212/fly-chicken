@@ -23,6 +23,7 @@ namespace 小飛雞
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            Start.num = 0;
             pictureBox2.Size = new Size (59, 560);
             timer2.Start();   //柱子開始的timer
             pictureBox1.Location = new Point(125, 200);   //小雞定位
@@ -68,13 +69,13 @@ namespace 小飛雞
             switch (x)
             {
                 case 0:
-                    newPictureBox.Image = Properties.Resources.Flappy_Bird_down; //newPictureBox開啟圖片向上的
-                    newPictureBox.Location = new Point(918, newpic_top.Next(370, 530));  // 設定位置
+                    newPictureBox.Image = Properties.Resources.Flappy_Bird_down; //newPictureBox開啟圖片下柱子
+                    newPictureBox.Location = new Point(918, newpic_top.Next(270, 530));  // 設定位置
                     break;
 
                 case 1:
-                    newPictureBox.Image = Properties.Resources.Flappy_Bird_up;   //newPictureBox開啟圖片向下的
-                    newPictureBox.Location = new Point(918, newpic_top.Next(-400, -230));  // 設定位置
+                    newPictureBox.Image = Properties.Resources.Flappy_Bird_up;   //newPictureBox開啟圖片上柱子
+                    newPictureBox.Location = new Point(918, newpic_top.Next(-400, -120));  // 設定位置
                     break;
             }
             newPictureBox.Visible = true;  // 顯示分身
@@ -93,6 +94,7 @@ namespace 小飛雞
 
                 if (newPictureBox.Left <= -30)   //如果newPictureBox碰到底部後消失
                 {
+                    Start.num++;
                     timer.Stop();
                     this.Controls.Remove(newPictureBox);
                     newPictureBox.Dispose();
@@ -115,7 +117,6 @@ namespace 小飛雞
             {
                 pictureBox1.Top -= 40;   //點擊後小雞會飛起
             }
-
         }
     }
 }
