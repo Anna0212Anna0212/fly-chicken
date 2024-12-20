@@ -31,7 +31,7 @@ namespace 小飛雞
 
         private void Start_Load(object sender, EventArgs e)
         {
-            label3.Text = "使用空白鍵\n進行小雞飛飛~";
+            MessageBox.Show("使用空白鍵\n進行小雞飛飛~","遊玩方式");
             timer1.Start();  //顯示成績
         }
 
