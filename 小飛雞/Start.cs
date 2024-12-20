@@ -44,7 +44,8 @@ namespace 小飛雞
 
         private void button2_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("使用空白鍵\n進行小雞飛飛~", "遊玩方式");
+            //顯示遊玩說明
+            MessageBox.Show("使用空白鍵\n進行小雞飛飛~", "遊玩方式");   
         }
     }
 }
