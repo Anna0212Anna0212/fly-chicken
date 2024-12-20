@@ -31,7 +31,6 @@ namespace 小飛雞
 
         private void Start_Load(object sender, EventArgs e)
         {
-            MessageBox.Show("使用空白鍵\n進行小雞飛飛~","遊玩方式");
             timer1.Start();  //顯示成績
         }
 
@@ -41,6 +40,11 @@ namespace 小飛雞
                 top_num = num;
             label1.Text = "最高分" + top_num;    //顯示分數
             label2.Text = "上次成績" + num;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("使用空白鍵\n進行小雞飛飛~", "遊玩方式");
         }
     }
 }

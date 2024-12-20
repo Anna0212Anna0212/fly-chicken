@@ -118,22 +118,28 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Flap_Down" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Flap_Down.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Day - 複製" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Day - 複製.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Day" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Day.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Flappy Bird down" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Flappy Bird down.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="說明" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\說明.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Flappy Bird up" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Flappy Bird up.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Flappy Bird down" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Flappy Bird down.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Start" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Start.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Day" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Day.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Day - 複製" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Day - 複製.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Flap_Down" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Flap_Down.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="說明1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\說明1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
