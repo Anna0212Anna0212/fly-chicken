@@ -62,7 +62,7 @@ namespace 小飛雞
         private void timer2_Tick(object sender, EventArgs e)
         {
             //設定柱子出來時機
-            timer2.Interval = (newpic_top.Next(1100, 2500));  
+            timer2.Interval = (newpic_top.Next(1100, 2100));  
             // 建立 PictureBox 分身
             PictureBox newPictureBox = new PictureBox();  
             newPictureBox.Size = pictureBox2.Size;    // 以 pictureBox2 為模板複製
