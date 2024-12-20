@@ -16,7 +16,7 @@ namespace 小飛雞
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new Start());   //調整成按下開始時執行start專案
         }
     }
 }
