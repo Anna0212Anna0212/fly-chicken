@@ -31,6 +31,7 @@ namespace 小飛雞
 
         private void Start_Load(object sender, EventArgs e)
         {
+            timer1.Start();
            if (num > top_num)
                 top_num = num;
            label1.Text = "最高分" + top_num;
