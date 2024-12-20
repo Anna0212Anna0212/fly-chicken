@@ -73,6 +73,16 @@ namespace 小飛雞.Properties {
         /// <summary>
         ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
         /// </summary>
+        internal static System.Drawing.Bitmap Day___複製 {
+            get {
+                object obj = ResourceManager.GetObject("Day - 複製", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+        /// </summary>
         internal static System.Drawing.Bitmap Flap_Down {
             get {
                 object obj = ResourceManager.GetObject("Flap_Down", resourceCulture);
@@ -96,6 +106,16 @@ namespace 小飛雞.Properties {
         internal static System.Drawing.Bitmap Flappy_Bird_up {
             get {
                 object obj = ResourceManager.GetObject("Flappy Bird up", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+        /// </summary>
+        internal static System.Drawing.Bitmap Start {
+            get {
+                object obj = ResourceManager.GetObject("Start", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
