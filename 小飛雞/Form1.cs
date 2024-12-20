@@ -28,7 +28,8 @@ namespace 小飛雞
             timer2.Start();   //柱子開始的timer
             pictureBox1.Location = new Point(125, 200);   //小雞定位
             timer1.Start();   //小雞的位置開始下降timer
-            pictureBox2.Visible = false;   //柱子的範本，因為有出錯所以timer停止、顯示隱藏
+            //柱子的範本，因為有出錯所以timer停止、顯示隱藏
+            pictureBox2.Visible = false;   
 
             // 設置窗體能夠捕捉鍵盤事件 
             this.KeyPreview = true;
@@ -61,21 +62,25 @@ namespace 小飛雞
         private void timer2_Tick(object sender, EventArgs e)
         {
             //設定柱子出來時機
-            timer2.Interval = (newpic_top.Next(2500, 3000));  
+            timer2.Interval = (newpic_top.Next(1100, 2500));  
             // 建立 PictureBox 分身
             PictureBox newPictureBox = new PictureBox();  
             newPictureBox.Size = pictureBox2.Size;    // 以 pictureBox2 為模板複製
             int x = newpic_top.Next(0, 2);   //利用亂數來決定上還是下的柱子
-            switch (x)
+            switch (x)   //0為下柱子、1為上柱子
             {
                 case 0:
-                    newPictureBox.Image = Properties.Resources.Flappy_Bird_down; //newPictureBox開啟圖片下柱子
-                    newPictureBox.Location = new Point(918, newpic_top.Next(270, 530));  // 設定位置
+                    //newPictureBox開啟圖片下柱子
+                    newPictureBox.Image = Properties.Resources.Flappy_Bird_down;
+                    // 設定位置
+                    newPictureBox.Location = new Point(918, newpic_top.Next(270, 530));  
                     break;
 
                 case 1:
-                    newPictureBox.Image = Properties.Resources.Flappy_Bird_up;   //newPictureBox開啟圖片上柱子
-                    newPictureBox.Location = new Point(918, newpic_top.Next(-400, -120));  // 設定位置
+                    //newPictureBox開啟圖片上柱子
+                    newPictureBox.Image = Properties.Resources.Flappy_Bird_up;
+                    // 設定位置
+                    newPictureBox.Location = new Point(918, newpic_top.Next(-400, -120));  
                     break;
             }
             newPictureBox.Visible = true;  // 顯示分身
@@ -94,9 +99,9 @@ namespace 小飛雞
 
                 if (newPictureBox.Left <= -30)   //如果newPictureBox碰到底部後消失
                 {
-                    Start.num++;
-                    timer.Stop();
-                    this.Controls.Remove(newPictureBox);
+                    Start.num++;   //碰到底部為跳過一個柱子，加一分
+                    timer.Stop();    //停止繼續向後移動
+                    this.Controls.Remove(newPictureBox);    //刪除分身
                     newPictureBox.Dispose();
                     timer.Dispose();
                 }

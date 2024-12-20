@@ -31,18 +31,15 @@ namespace 小飛雞
 
         private void Start_Load(object sender, EventArgs e)
         {
-            timer1.Start();
-           if (num > top_num)
-                top_num = num;
-           label1.Text = "最高分" + top_num;
-           label2.Text = "上次成績" + num;
+            label3.Text = "使用空白鍵\n進行小雞飛飛~";
+            timer1.Start();  //顯示成績
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if (num > top_num)
+            if (num > top_num)    //設定最高分
                 top_num = num;
-            label1.Text = "最高分" + top_num;
+            label1.Text = "最高分" + top_num;    //顯示分數
             label2.Text = "上次成績" + num;
         }
     }
