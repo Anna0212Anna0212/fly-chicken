@@ -87,6 +87,7 @@ namespace 小飛雞
             this.Controls.Add(newPictureBox);  // 將分身加入到表單的控制項集合中
 
             // 使用 Timer 來移動 newPictureBox
+            //特別說明System.Windows.Forms.以跟物件的timer區別
             System.Windows.Forms.Timer timer = new System.Windows.Forms.Timer();   
             //因為newPictureBox沒法在建立的timer3物件中顯示，只能在此建立一個timer來用
             timer.Interval = 1; // 設定移動的時間間隔 (20 毫秒)
