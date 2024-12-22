@@ -26,7 +26,7 @@ namespace 小飛雞
 
             //開啟Form1專案
             Form1 form1 = new Form1();
-            form1.Show();
+            form1.ShowDialog();
         }
 
         private void Start_Load(object sender, EventArgs e)
