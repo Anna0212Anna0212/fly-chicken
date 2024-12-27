@@ -40,6 +40,7 @@ namespace 小飛雞
 
         private void timer1_Tick(object sender, EventArgs e)
         {
+            label1.Text = form_num.ToString();
             pictureBox1.Top += 15;    //小雞下降
             if (pictureBox1.Top >= 700|| pictureBox1.Top <= 0)    //如果碰倒邊界停止遊戲
             {
