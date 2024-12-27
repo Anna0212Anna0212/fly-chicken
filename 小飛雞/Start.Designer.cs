@@ -130,7 +130,7 @@
             this.button2.BackgroundImage = global::小飛雞.Properties.Resources.說明1;
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(202, 258);
+            this.button2.Location = new System.Drawing.Point(202, 254);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(175, 68);
             this.button2.TabIndex = 8;
