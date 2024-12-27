@@ -20,6 +20,7 @@ namespace 小飛雞
             this.StartPosition = FormStartPosition.CenterScreen; // 視窗居中顯示
         }
         Random newpic_top = new Random();  //柱子的位置移動亂數
+        int form_num = 0;
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -62,7 +63,7 @@ namespace 小飛雞
         private void timer2_Tick(object sender, EventArgs e)
         {
             //設定柱子出來時機
-            timer2.Interval = (newpic_top.Next(1300, 2100));  
+            timer2.Interval = (newpic_top.Next(1550, 2100));  
             // 建立 PictureBox 分身
             PictureBox newPictureBox = new PictureBox();  
             newPictureBox.Size = pictureBox2.Size;    // 以 pictureBox2 為模板複製
@@ -73,14 +74,14 @@ namespace 小飛雞
                     //newPictureBox開啟圖片下柱子
                     newPictureBox.Image = Properties.Resources.Flappy_Bird_down;
                     // 設定位置
-                    newPictureBox.Location = new Point(918, newpic_top.Next(244, 530));  
+                    newPictureBox.Location = new Point(918, newpic_top.Next(277, 530));  
                     break;
 
                 case 1:
                     //newPictureBox開啟圖片上柱子
                     newPictureBox.Image = Properties.Resources.Flappy_Bird_up;
                     // 設定位置
-                    newPictureBox.Location = new Point(918, newpic_top.Next(-400, -144));  
+                    newPictureBox.Location = new Point(918, newpic_top.Next(-400, -277));  
                     break;
             }
             newPictureBox.Visible = true;  // 顯示分身
@@ -104,15 +105,16 @@ namespace 小飛雞
                     this.Controls.Remove(newPictureBox);    //刪除分身
                     newPictureBox.Dispose();
                     timer.Dispose();
-                    Start.num++;   //碰到底部為跳過一個柱子，加一分
+                    form_num++;   //碰到底部為跳過一個柱子，加一分
                 }
-                else if (rect1.IntersectsWith(rect2))   //如果newPictureBox碰到小雞後消失
+                if (rect1.IntersectsWith(rect2))   //如果newPictureBox碰到小雞後消失
                 {
                     timer.Stop();    //停止繼續向後移動
                     this.Controls.Remove(newPictureBox);    //刪除分身
-                    this.Controls.Clear();
+                    //this.Controls.Clear();
                     newPictureBox.Dispose();
                     timer.Dispose();
+                    Start.num = form_num;    //將成績轉移到start.cs
                     this.Close();   //顯示遊戲結束
                 }
             };
