@@ -21,7 +21,7 @@ namespace 小飛雞
         }
         Random newpic_top = new Random();  //柱子的位置移動亂數
         int form_num = 0;
-
+        bool okyes=true;
         private void Form1_Load(object sender, EventArgs e)
         {
             Start.num = 0;
@@ -44,6 +44,8 @@ namespace 小飛雞
             pictureBox1.Top += 13;    //小雞下降
             if (pictureBox1.Top >= 700|| pictureBox1.Top <= 0)    //如果碰倒邊界停止遊戲
             {
+                okyes = false;
+                Start.num = form_num;    //將成績轉移到start.cs
                 this.Close();   //顯示遊戲結束
             }
         }
@@ -106,10 +108,14 @@ namespace 小飛雞
                     this.Controls.Remove(newPictureBox);    //刪除分身
                     newPictureBox.Dispose();
                     timer.Dispose();
-                    form_num++;   //碰到底部為跳過一個柱子，加一分
+                    if (okyes)
+                    {
+                        form_num++;   //碰到底部為跳過一個柱子，加一分
+                    }
                 }
                 if (rect1.IntersectsWith(rect2))   //如果newPictureBox碰到小雞後消失
                 {
+                    okyes = false;
                     timer.Stop();    //停止繼續向後移動
                     this.Controls.Remove(newPictureBox);    //刪除分身
                     //this.Controls.Clear();
